@@ -100,6 +100,15 @@ or set it in `~/.claude/settings.json`:
 | **Remote control, on by default** | Flip the default so every Claude Code session is reachable from the mobile app. Steer runs from anywhere without having to be at the laptop. |
 | **Phone-notify stop hook** | A Stop hook that asks Claude, *"should I page you on mobile?"* — fires on long commands (>30s) or when blocked on a decision, skips trivial turns. Prevents the "push for every turn" spam you'd get from an always-on notifier. |
 
+### in development
+
+*zesting, testing, breaking things.*
+
+| Plugin | What it does |
+|---|---|
+| `pre-mortem` 🔮 | Before executing a plan, imagine it has already failed. Enumerate the most likely failure modes — wrong assumptions, brittle dependencies, ambiguous requirements, silent edge cases, integration seams, retry/rollback gaps — rank by likelihood × blast radius, and fold the cheapest precondition checks into the plan *before* execution starts. _"What would make me wish I'd thought about this for five more minutes?" — answered before the five minutes become five hours._ |
+| `post-mortem` 🩹 | After something goes wrong, reconstruct *why*. Separate the proximate cause (the bad line) from the systemic cause (the missing guardrail, the workflow gap that let it through). Capture what was believed vs. what was true, what signal was ignored, and the smallest durable change — a check, a skill, a doc, a hook — that would have caught it. _Turn each scar into a callus._ |
+
 ## license
 
 [MIT](LICENSE) © 2026 Cody Hergenroeder
