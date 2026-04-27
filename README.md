@@ -108,6 +108,7 @@ or set it in `~/.claude/settings.json`:
 |---|---|
 | `pre-mortem` 🔮 | Before executing a plan, imagine it has already failed. Enumerate the most likely failure modes — wrong assumptions, brittle dependencies, ambiguous requirements, silent edge cases, integration seams, retry/rollback gaps — rank by likelihood × blast radius, and fold the cheapest precondition checks into the plan *before* execution starts. _"What would make me wish I'd thought about this for five more minutes?" — answered before the five minutes become five hours._ |
 | `post-mortem` 🩹 | After something goes wrong, reconstruct *why*. Separate the proximate cause (the bad line) from the systemic cause (the missing guardrail, the workflow gap that let it through). Capture what was believed vs. what was true, what signal was ignored, and the smallest durable change — a check, a skill, a doc, a hook — that would have caught it. _Turn each scar into a callus._ |
+| `strawman/steelman` 🥊 | A confidence stress-test for whatever Claude is asserting. Force it to construct both the *steelman* (the strongest, most charitable version of the opposing view) and the *strawman* (the weakest, most caricatured version), then locate its actual claim against both. Surfaces overconfidence, hidden assumptions, and the cases where Claude is busy demolishing a position nobody actually holds. _If you can't beat the steelman, you don't get to celebrate beating the strawman._ |
 
 ## license
 
