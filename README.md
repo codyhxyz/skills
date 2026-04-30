@@ -1,4 +1,4 @@
-# codyhxyz-plugins 🍋
+# codyhxyz 🍋
 These days I talk to my computer more than I use the keyboard and mouse. We've entered a new dawn of human-computer interaction where individuals' computer use is starting to diverge. If 2025 was the Year of the Agent, 2026 the start to the era of '[Bespoke Software](https://x.com/karpathy/status/2024583544157458452)'.
 
 In the spirit of open-sourcing myself, I'm open-sourcing my Claude plugins. The gap between individuals who are augmenting themselves and those who aren't is growing. When I find a way of working with the computer that works for me, I want to share that experience. This is my contribution bridge that gap. 
@@ -12,20 +12,20 @@ These are the tools I use to interact with the digital world. This is my bespoke
   <a href="https://claude.com/product/claude-code"><img src="https://img.shields.io/badge/built_for-Claude%20Code-d97706" alt="Built for Claude Code"></a>
 </p>
 
-<p align="center"><img src="assets/hero.svg" alt="codyhxyz-plugins · for those who need the lemon zest" width="100%"></p>
+<p align="center"><img src="assets/hero.svg" alt="codyhxyz · for those who need the lemon zest" width="100%"></p>
 
 ## install
 
 add the marketplace and install any plugin from the table below in one go:
 
 ```
-/plugin marketplace add codyhxyz/codyhxyz-plugins && /plugin install <plugin-name>@codyhxyz-plugins
+/plugin marketplace add codyhxyz/skills && /plugin install <plugin-name>@codyhxyz
 ```
 
 pull new plugins and version bumps manually:
 
 ```
-/plugin marketplace update codyhxyz-plugins
+/plugin marketplace update codyhxyz
 ```
 
 ## important! enable auto-update
@@ -34,15 +34,15 @@ third-party marketplaces ship with auto-update **off** by default (a questionabl
 
 1. run `/plugin` in Claude Code
 2. open the **Marketplaces** tab
-3. select `codyhxyz-plugins` → **Enable auto-update**
+3. select `codyhxyz` → **Enable auto-update**
 
 or set it in `~/.claude/settings.json`:
 
 ```json
 {
   "extraKnownMarketplaces": {
-    "codyhxyz-plugins": {
-      "source": { "source": "github", "repo": "codyhxyz/codyhxyz-plugins" },
+    "codyhxyz": {
+      "source": { "source": "github", "repo": "codyhxyz/skills" },
       "autoUpdate": true
     }
   }
@@ -109,6 +109,15 @@ or set it in `~/.claude/settings.json`:
 | `pre-mortem` 🔮 | Before executing a plan, imagine it has already failed. Enumerate the most likely failure modes — wrong assumptions, brittle dependencies, ambiguous requirements, silent edge cases, integration seams, retry/rollback gaps — rank by likelihood × blast radius, and fold the cheapest precondition checks into the plan *before* execution starts. _"What would make me wish I'd thought about this for five more minutes?" — answered before the five minutes become five hours._ |
 | `post-mortem` 🩹 | After something goes wrong, reconstruct *why*. Separate the proximate cause (the bad line) from the systemic cause (the missing guardrail, the workflow gap that let it through). Capture what was believed vs. what was true, what signal was ignored, and the smallest durable change — a check, a skill, a doc, a hook — that would have caught it. _Turn each scar into a callus._ |
 | `strawman/steelman` 🥊 | A confidence stress-test for whatever Claude is asserting. Force it to construct both the *steelman* (the strongest, most charitable version of the opposing view) and the *strawman* (the weakest, most caricatured version), then locate its actual claim against both. Surfaces overconfidence, hidden assumptions, and the cases where Claude is busy demolishing a position nobody actually holds. _If you can't beat the steelman, you don't get to celebrate beating the strawman._ |
+
+### plugins i'm thinking about
+
+*on the radar — not adopted yet, just sitting with them. i'll move them up the page if they earn it.*
+
+| Plugin | What it does |
+|---|---|
+| [`waza` 🥷 ↗](https://github.com/tw93/Waza) | **↗ not mine, just thinking about it.** Engineering habits packaged as skills — `/think` (pressure-test the design before code), `/check` (review the diff, auto-fix safe issues), `/hunt` (root-cause debugging), `/design`, `/learn`, `/read`, `/write`. Adjacent to `eureka` and `first-principles-review` in spirit. Install: `/plugin marketplace add tw93/Waza && /plugin install <skill>@waza`. |
+| [`empirical-prompt-tuning` 🧪 ↗](https://github.com/mizchi/skills/tree/main/empirical-prompt-tuning) | **↗ not mine, just thinking about it.** Run *after* writing a skill or slash command. Dispatches a blank-slate subagent to actually execute your prompt against 2–3 scenarios with a fixed requirements checklist, then evaluates from both sides (executor self-report + instruction-side accuracy %) and iterates until improvements plateau. Catches the gap between "what I meant" and "what another agent reads." Adjacent to `prompt-optimizer` but for hardening prompts you've already written instead of fixing the ones you're about to send. |
 
 ## license
 
