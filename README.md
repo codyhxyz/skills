@@ -122,7 +122,3 @@ or set it in `~/.claude/settings.json`:
 ## license
 
 [MIT](LICENSE) © 2026 Cody Hergenroeder
-
----
-
-<sub><i>"i create because i envision that there are people out there who need the lemon zest."</i></sub>
