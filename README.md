@@ -12,8 +12,6 @@ These are the tools I use to interact with the digital world. This is my bespoke
   <a href="https://claude.com/product/claude-code"><img src="https://img.shields.io/badge/built_for-Claude%20Code-d97706" alt="Built for Claude Code"></a>
 </p>
 
-<p align="center"><img src="assets/hero.svg" alt="codyhxyz · for those who need the lemon zest" width="100%"></p>
-
 ## install
 
 add the marketplace and install any plugin from the table below in one go:
