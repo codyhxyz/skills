@@ -74,14 +74,14 @@
         "source": "github",
         "repo": "codyhxyz/create-chrome-extension"
       },
-      "description": "Six skills + a WXT factory that take you from Chrome extension idea to live on the Web Store in one Claude session. Encodes ~18 Chrome Web Store rules as validators so you can't accidentally ship a half-baked listing.",
+      "description": "Eight skills + a WXT factory that take you from Chrome extension idea to live on the Web Store in one Claude session. Encodes Chrome Web Store rules as validators, and drives the Web Store dashboard for you (description, URLs, Privacy tab, submit).",
       "author": {
         "name": "Cody Hergenroeder",
         "email": "plugins@codyh.xyz"
       },
       "homepage": "https://github.com/codyhxyz/create-chrome-extension",
       "repository": "https://github.com/codyhxyz/create-chrome-extension",
-      "license": "MIT",
+      "license": "AGPL-3.0",
       "keywords": [
         "claude-code",
         "claude-code-plugin",
